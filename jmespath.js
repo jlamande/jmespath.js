@@ -875,6 +875,9 @@
                   if (field === undefined) {
                       return null;
                   } else {
+                      if(field instanceof Date) {
+                        field=field.toISOString();
+                      }
                       return field;
                   }
               }
